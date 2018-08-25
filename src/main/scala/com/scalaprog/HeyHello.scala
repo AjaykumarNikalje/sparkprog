@@ -4,5 +4,6 @@ object HeyHello {
   def main(args: Array[String]) {
     println("Hello, world!");
     println{"Testing git commits"};
+    println{"Testing git commits2"};
   }
 }
