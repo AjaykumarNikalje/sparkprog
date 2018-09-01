@@ -2,6 +2,8 @@ package com.scalaprog
 import org.apache.spark._
 import org.apache.spark.SparkContext._
 
+
+/* /bin/spark-submit -class com.scalaprog.WordCount --master local[3] /home/nikaljeajay369029/jars/SparkApp.jar */
 object WordCount {
   def main(args: Array[String]) {
   val conf = new SparkConf().setAppName("wordCount")
