@@ -3,7 +3,7 @@ import org.apache.spark._
 import org.apache.spark.SparkContext._
 
 object WordCount {
-
+  def main(args: Array[String]) {
   val conf = new SparkConf().setAppName("wordCount")
   // Create a Scala Spark Context.
   val sc = new SparkContext(conf)
@@ -12,4 +12,5 @@ object WordCount {
   // Transform into word and count.
   var counts = words.map(word => (word, 1)).reduceByKey{case (x, y) => x + y}
   counts.saveAsTextFile("tenants/testing/wordcountresult.txt")
+  }
 }
